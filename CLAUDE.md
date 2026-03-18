@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Git Operations
+
+Whenever running `git add`` and `git commit`, it is CRITICAL that they are run separately. DO NOT run `git add && git commit` as one command.
+
 ## Project
 
 SpendLens — a personal finance dashboard built with SvelteKit. Demo app showcasing autonomous agentic coding capabilities. See `PRD.json` for the full task breakdown.
