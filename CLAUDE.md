@@ -32,9 +32,13 @@ bun run test
 
 ## Using libraries and SDKs
 
-ALWAYS look up documentation for various libraries and SDKs before implementation. 
+ALWAYS look up documentation for various libraries and SDKs before implementation.
 When working through a PRD, at the start of each task, before you implement anything, you must look up the relevant documentation.
 Use either Context7 MCP, WebFetch, WebSearch, or curl to do your lookups.
+
+## Frontend Work
+
+Use the /frontend-design skill for any UI-related work.
 
 ## Stack
 
