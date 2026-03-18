@@ -1,0 +1,65 @@
+[
+	{
+		"category": "infra",
+		"description": "Install dependencies and configure Tailwind CSS with a dark theme.",
+		"steps": [
+			"Install chart.js and tailwindcss with bun",
+			"Configure Tailwind with dark mode, zinc palette, teal accent",
+			"Update app.html and +layout.svelte with dark background and base styles"
+		],
+		"passes": false
+	},
+	{
+		"category": "infra",
+		"description": "Create mock transaction data and basic aggregation helpers.",
+		"steps": [
+			"Create src/lib/data/transactions.ts with ~50 mock transactions across 3 months and 5 categories (dining, groceries, gas, entertainment, shopping)",
+			"Create src/lib/utils/aggregations.ts with helpers: spendingByCategory, monthlyTotals, totalSpent"
+		],
+		"passes": false
+	},
+	{
+		"category": "ui",
+		"description": "Build the dashboard page with stat cards, a doughnut chart, and a transaction list.",
+		"steps": [
+			"Create src/lib/components/StatCard.svelte — reusable card showing a label and dollar value",
+			"Create src/lib/components/CategoryChart.svelte — chart.js doughnut chart of spending by category",
+			"Create src/lib/components/TransactionList.svelte — simple list of recent transactions with date, merchant, amount",
+			"Wire everything into src/routes/+page.svelte with a header ('SpendLens'), stat cards row, chart, and transaction list in a single-column layout"
+		],
+		"passes": false
+	},
+	{
+		"category": "infra",
+		"description": "Add vitest and write basic tests for the aggregation utils.",
+		"steps": [
+			"Install vitest with bun and add test script to package.json",
+			"Write tests for spendingByCategory, monthlyTotals, and totalSpent",
+			"Ensure all tests pass with bun run test"
+		],
+		"passes": false
+	},
+	{
+		"category": "ui",
+		"description": "Add a monthly spending trend line chart showing the past 3 months.",
+		"steps": [
+			"Create src/lib/utils/aggregations.ts helper: spendingByMonth returning [{month, total}]",
+			"Create src/lib/components/TrendChart.svelte — chart.js Line chart with teal stroke, no fill, month labels on x-axis",
+			"Mount TrendChart in +page.svelte below the stat cards row",
+			"Write a vitest unit test for the spendingByMonth helper"
+		],
+		"passes": false
+	},
+	{
+		"category": "ui",
+		"description": "Build a budget vs. actual comparison panel.",
+		"steps": [
+			"Add budget constants to src/lib/data/budgets.ts — one budget per category (e.g. dining: 400, groceries: 300, etc.)",
+			"Add budgetComparison helper to aggregations.ts returning [{category, budget, actual, pct}]",
+			"Create src/lib/components/BudgetPanel.svelte — horizontal bar list with teal fill for under-budget, red fill for over-budget",
+			"Add BudgetPanel to +page.svelte in a two-column grid alongside CategoryChart",
+			"Write vitest tests for budgetComparison"
+		],
+		"passes": false
+	}
+]
