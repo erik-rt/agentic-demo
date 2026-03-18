@@ -4,7 +4,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Git Operations
 
-Whenever running `git add`` and `git commit`, it is CRITICAL that they are run separately. DO NOT run `git add && git commit` as one command.
+Whenever running `git add` and `git commit`, it is CRITICAL that they are run separately. DO NOT run `git add && git commit` as one command.
+Additionally, it is critical that no flags are added to `git add` or `git commit` e.g., `git -C <arg> add`.
 
 ## Project
 
