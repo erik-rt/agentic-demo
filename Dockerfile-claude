@@ -1,0 +1,34 @@
+FROM alpine:latest
+
+# Install packages
+RUN apk update && apk add --no-cache \
+    bash \
+    curl \
+    git \
+    build-base \
+    python3 \
+    py3-pip \
+    nodejs \
+    npm \
+    vim \
+    unzip \
+    sudo
+
+# Install Claude Code CLI (as root, globally)
+RUN npm install -g @anthropic-ai/claude-code
+
+# Create non-root user
+RUN adduser -D -s /bin/bash claude && \
+    echo "claude ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+# Install Bun for the claude user
+USER claude
+RUN curl -fsSL https://bun.sh/install | bash
+ENV BUN_INSTALL="/home/claude/.bun"
+ENV PATH="$BUN_INSTALL/bin:$PATH"
+
+# Set up working directory
+WORKDIR /workspace
+
+# Default command
+CMD ["bash"]
