@@ -43,7 +43,7 @@ Use either Context7 MCP, WebFetch, WebSearch, or curl to do your lookups.
 
 ## Frontend Work
 
-Use the /frontend-design skill for any UI-related work.
+CRITICAL: Use the /frontend-design skill for all UI tasks if it is available to you.
 
 ## Stack
 
