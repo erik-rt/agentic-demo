@@ -38,28 +38,5 @@
 			"Ensure all tests pass with bun run test"
 		],
 		"passes": false
-	},
-	{
-		"category": "ui",
-		"description": "Add a monthly spending trend line chart showing the past 3 months.",
-		"steps": [
-			"Create src/lib/utils/aggregations.ts helper: spendingByMonth returning [{month, total}]",
-			"Create src/lib/components/TrendChart.svelte — chart.js Line chart with teal stroke, no fill, month labels on x-axis",
-			"Mount TrendChart in +page.svelte below the stat cards row",
-			"Write a vitest unit test for the spendingByMonth helper"
-		],
-		"passes": false
-	},
-	{
-		"category": "ui",
-		"description": "Build a budget vs. actual comparison panel.",
-		"steps": [
-			"Add budget constants to src/lib/data/budgets.ts — one budget per category (e.g. dining: 400, groceries: 300, etc.)",
-			"Add budgetComparison helper to aggregations.ts returning [{category, budget, actual, pct}]",
-			"Create src/lib/components/BudgetPanel.svelte — horizontal bar list with teal fill for under-budget, red fill for over-budget",
-			"Add BudgetPanel to +page.svelte in a two-column grid alongside CategoryChart",
-			"Write vitest tests for budgetComparison"
-		],
-		"passes": false
 	}
 ]

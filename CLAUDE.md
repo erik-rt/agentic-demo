@@ -41,10 +41,6 @@ ALWAYS look up documentation for various libraries and SDKs before implementatio
 When working through a PRD, at the start of each task, before you implement anything, you must look up the relevant documentation.
 Use either Context7 MCP, WebFetch, WebSearch, or curl to do your lookups.
 
-## Frontend Work
-
-CRITICAL: Use the /frontend-design skill for all UI tasks if it is available to you.
-
 ## Stack
 
 - **SvelteKit** with `adapter-auto`, Svelte 5 runes mode
